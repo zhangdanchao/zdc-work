@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#mydiv{
+				width: 465px;
+				margin: 0 auto;
+				margin-top: 150px;
+				padding-left: 25px;
+				padding-top: 25px;
+				padding-bottom: 25px;
+				box-shadow:1px 1px 5px #000000;
+			}
+			#in1{
+				width: 300px;
+				height: 30px;
+				margin-bottom: 20px;
+				display: inline-block;
+			}
+			#in2{
+				width: 300px;
+				height: 30px;
+				margin-bottom: 20px;
+			}
+			#bu{
+				width: 302px;
+				height: 32px;
+				color: #0077cc;
+				border: 1px solid #0077cc;
+				background-color:white ;
+			}
+			#p1{
+				color: #0077cc;
+				font-size: 24px;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+			#p2{
+				font-size: 14px;
+				margin-bottom:5px;
+			}
+			#p3{
+				font-size: 14px;
+				margin-bottom:5px;
+			}
+			#p4{
+				font-size: 14px;
+				color: red;
+				width: 130px;
+				display: inline-block;
+			}
+			#p5{
+				font-size: 14px;
+				color: red;
+				width: 130px;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mydiv">
+			<p id="p1">创建账号</p>
+			<p id="p2">用户名:</p>
+			<input type="text" id="in1">
+			<p id="p4"></p>
+			<p id="p3">密码:</p>
+			<input type="text" id="in2">
+			<p id="p5"></p>
+			<button id="bu">立即注册</button>
+			
+			<script>
+				var in1 = document.getElementById('in1');
+				
+				var p4 = document.getElementById('p4');
+				var p5 = document.getElementById('p5');
+				var bu = document.getElementById('bu');
+				in2.onclick = function(){
+					if(in1.value == ''||in1.value == 'tom'||in1.value == 'jack'||in1.value == 'lili'){
+						p4.innerText = '请重新输入用户名';
+					}else{
+						p4.innerText = '';
+					}
+				}
+				bu.onclick = function(){
+					var in2 = document.getElementById('in2');
+					if(in1.value == ''||in1.value == 'tom'||in1.value == 'jack'||in1.value == 'lili'){
+						p4.innerText = '请重新输入用户名';
+						return;
+					}else{
+						p4.innerText = '';
+						
+					}
+					if(in2.value == ''){
+						p5.innerText = '请输入密码';
+						return;
+					}else{
+						p5.innerText = '';
+					}
+					alert('注册成功');
+				}
+			</script>
+		</div>
+	</body>
+</html>
