@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input id="inp" type="text" placeholder="请输入名字">
+    <button id="bu1">签到</button>
+    <button id="bu2">未签到</button>
+    <div id="mydiv"></div>
+    <script>
+        var inp = document.getElementById('inp');
+        var bu1 = document.getElementById('bu1');
+        var bu2 = document.getElementById('bu2');
+        var div = document.getElementById('mydiv');
+        var name1 = '"卡卡罗特","海绵宝宝","派大星","章鱼哥","樱木花道","熊大","熊二"';
+        var name2 = [];
+        bu1.onclick = function(){
+            name2.push(inp.value);
+            div.innerHTML = name2;
+        }
+        bu2.onclick=function(){
+				var aa = new RegExp(name2.join('|'),"ig");
+				var bb = name1.replace(aa,"");
+				mydiv.innerHTML = '未签到人有:' + bb;
+			}
+    </script>
+</body>
+</html>
