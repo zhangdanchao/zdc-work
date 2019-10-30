@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        #mydiv{
+            position: absolute;
+            top: 110px;
+            left: 120px;
+            display: none;
+        }
+        #mydiv>div{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            float: left;
+            border: 2px solid #ffffff;
+            /* margin-left:-54px; */
+            
+        }
+        #div1{
+            background-color: red;
+        }
+        #div2{
+            background-color: yellow;
+        }
+        #div3{
+            background-color: blue;
+        }
+        #div4{
+            background-color: green;
+        }
+        #div5{
+            background-color: black;
+        }
+        #dog{
+            width: 100px;
+            height: 100px;
+            background-color:grey;
+            border: 3px solid #ffffff;
+            position: absolute;
+            top: 85px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="dog"></div>
+    <div id="mydiv">
+        <div class="divs" id="div1"></div>
+        <div class="divs" id="div2"></div>
+        <div class="divs" id="div3"></div>
+        <div class="divs" id="div4"></div>
+        <div class="divs" id="div5"></div>
+    </div>
+    <script>
+        $("#div1").click(function(){
+            $("body").css({"background-color":"red"});
+            $("#dog").css({"background-color":"red"});
+        })
+        $("#div2").click(function(){
+            $("body").css({"background-color":"yellow"});
+            $("#dog").css({"background-color":"yellow"});
+        })
+        $("#div3").click(function(){
+            $("body").css({"background-color":"blue"});
+            $("#dog").css({"background-color":"blue"});
+        })
+        $("#div4").click(function(){
+            $("body").css({"background-color":"green"});
+            $("#dog").css({"background-color":"green"});
+        })
+        $("#div5").click(function(){
+            $("body").css({"background-color":"black"});
+            $("#dog").css({"background-color":"black"});
+        })
+        $("#dog").click(function(){
+            $("#mydiv").css({"display":"block"});
+        })
+        // transition: 1s;
+
+        // var divs = document.getElementsByClassName('divs');
+        // var dog = document.getElementById('dog');
+    </script>
+</body>
+</html>
